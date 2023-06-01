@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="app.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="fraction.js" charset="UTF-8"></script>
+	<link href="bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>Método Simplex - Por Vinicius Gonçalves & Victor Bicalho</title>
+</head>
+<body>
+	<div class="container main">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="title">Método Simplex - Por <b>Vinicius Gonçalves & Victor Bicalho</b></h1>
+			</div>
+			<div class="col-md-6 row">
+				<img class="author-img mr" src="autores/vinicius.png" alt="Vinicius">
+				<img class="author-img" src="autores/victor.png" alt="Victor">
+			</div>
+		</div>
+		<form name="form1" id="form1">
+			<fieldset>
+				<div class="row">
+					<div class="col-md-12">
+						<label for="variaveis" class="lbl1 mr">Defina a quantidade de variáveis:</label>
+						<input type="number" class="inp1" size="5%" maxlength="10" id="in1" name="variaveis" value="" min="1" autocomplete="off" autofocus/>
+					</div>
+				</div>
+				<br />
+				<div class="row">
+					<div class="col-md-12">
+						<label for="regras" class="lbl1 mr">Defina a quantidade de restrições:</label>
+						<input type="number" class="inp1" size="5%" maxlength="10" id="in2" name="regras" value="" min="1" autocomplete="off" />
+					</div>
+				</div>
+				<input type="button" class="inp1 btn-form" id="btn1" name="ok" value="Próxima etapa ->" onClick="criarForm(variaveis.value,regras.value)"/>
+			</fieldset>
+		</form>
+		
+		<br/>
+		<form action="" method="post" name="form2" id="form2" style="display: none;" class="form-resolution">
+			<p><b>Função objetivo (MAX L)</b></p>
+			<div id="aqui"></div>
+			<br/>
+			<label><input type="button" class="btn-form" id="btn2" name="calc" value="Resolver Problema" onClick="resolver()" /></label>
+			<label><input type="reset" class="btn-form-new" id="btn3" name="novo" value="Voltar" onClick="atualizar()"/></label>
+		</form>
+
+		<div id="tab" style="width: 100%; margin: 0 auto; color: #fff;"></div>
+		<label><input type="hidden" class="btn-form-new" style="margin-bottom: 30px;" id="btn4" name="novo2" value="Novo Problema" onClick="atualizar()"/></label>
+	</div>
+</body>
+</html>
