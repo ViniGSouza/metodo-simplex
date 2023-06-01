@@ -109,7 +109,7 @@ function validarCoeficientes(variaveis, restricoes) {
 }
 
 function atualizar() {
-	window.location.href='simplex.html';
+	document.location.reload(true);
 }
 
 function criarForm(variaveis, restricoes) {
